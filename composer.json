@@ -1,0 +1,37 @@
+{
+    "name": "coolms/taxonomy-bundle",
+    "description": "Symfony wiring for the taxonomy family: bundle, DI, console commands and the API surface.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "api-platform/core": "^4.1",
+        "coolms/core": "^2.0",
+        "coolms/core-bundle": "^2.0",
+        "coolms/entity": "^2.0.0-alpha3",
+        "coolms/entity-bundle": "^2.0",
+        "coolms/entity-doctrine": "^2.0",
+        "coolms/rql": "^1.0",
+        "coolms/taxonomy": "^2.0",
+        "coolms/taxonomy-doctrine": "^2.0",
+        "php": "^8.5",
+        "symfony/config": "^8.0",
+        "symfony/console": "^8.0",
+        "symfony/dependency-injection": "^8.0",
+        "symfony/http-foundation": "^8.0",
+        "symfony/http-kernel": "^8.0",
+        "symfony/routing": "^8.0",
+        "symfony/uid": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoolMS\\Taxonomy\\Bundle\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "2.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

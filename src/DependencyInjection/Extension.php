@@ -96,7 +96,18 @@ class Extension extends AbstractExtension implements PrependExtensionInterface
             \CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Processor\UpdateTaxonomyTreeProcessor::class,
             \CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Processor\DeleteTaxonomyTreeProcessor::class,
         ] as $apiService) {
-            $container->autowire($apiService)->setPublic(true);
+            // !! AUTOCONFIGURED, or API Platform never sees them. A provider is
+            // found through the `api_platform.state_provider` tag, and the tag is
+            // attached by autoconfiguration -- to autoconfigured definitions only.
+            // Registered without it, the service EXISTS (debug:container lists
+            // it, a test can fetch it) and every request answers 404
+            // ProviderNotFoundException. Measured 2026-09-14 on the Categories
+            // page: routes matched, provider "not found". The host application
+            // masked the same omission in coolms/field-bundle with its own
+            // prototype scan; a clean consumer has no such scan.
+            $container->autowire($apiService)
+                ->setAutoconfigured(true)
+                ->setPublic(true);
         }
 
         // Console commands and tagged contributors: autoconfiguration attaches

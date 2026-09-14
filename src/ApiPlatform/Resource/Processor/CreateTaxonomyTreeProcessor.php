@@ -6,11 +6,11 @@ namespace CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Processor;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
-use CoolMS\Taxonomy\Entity\TaxonomyTreeInterface;
-use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
+use CoolMS\Entity\Factory\EntityFactoryFactoryInterface;
 use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Provider\TaxonomyTreeProvider;
 use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\TaxonomyTreeResource;
-use CoolMS\Entity\Factory\EntityFactoryFactoryInterface;
+use CoolMS\Taxonomy\Entity\TaxonomyTreeInterface;
+use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
 

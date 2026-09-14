@@ -6,10 +6,10 @@ namespace CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Processor;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
+use CoolMS\Core\Bundle\ApiPlatform\UriVariableUuidExtractorTrait;
 use CoolMS\Taxonomy\Entity\TaxonomyNode;
 use CoolMS\Taxonomy\Repository\TaxonomyNodeRepositoryInterface;
 use CoolMS\Taxonomy\Service\TaxonomyTreeServiceInterface;
-use CoolMS\Core\Bundle\ApiPlatform\UriVariableUuidExtractorTrait;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /** @implements ProcessorInterface<mixed, null> */

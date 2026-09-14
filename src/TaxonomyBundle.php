@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace CoolMS\Taxonomy\Bundle;
 
+use CoolMS\Core\Bundle\AbstractCoolmsBundle;
 use CoolMS\Taxonomy\Bundle\DependencyInjection\Compiler\TaxonomyPass;
 use CoolMS\Taxonomy\Bundle\DependencyInjection\Extension;
-use CoolMS\Core\Bundle\AbstractCoolmsBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 final class TaxonomyBundle extends AbstractCoolmsBundle

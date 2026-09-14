@@ -6,9 +6,9 @@ namespace CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Processor;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
+use CoolMS\Core\Bundle\ApiPlatform\UriVariableUuidExtractorTrait;
 use CoolMS\Taxonomy\Entity\TaxonomyTree;
 use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
-use CoolMS\Core\Bundle\ApiPlatform\UriVariableUuidExtractorTrait;
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

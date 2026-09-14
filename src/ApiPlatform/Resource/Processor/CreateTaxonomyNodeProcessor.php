@@ -6,14 +6,14 @@ namespace CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Processor;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
+use CoolMS\Entity\Factory\EntityFactoryFactoryInterface;
+use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Provider\TaxonomyNodeProvider;
+use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\TaxonomyNodeResource;
 use CoolMS\Taxonomy\Entity\TaxonomyNode;
 use CoolMS\Taxonomy\Entity\TaxonomyNodeInterface;
 use CoolMS\Taxonomy\Repository\TaxonomyNodeRepositoryInterface;
 use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
 use CoolMS\Taxonomy\Service\TaxonomyTreeServiceInterface;
-use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Provider\TaxonomyNodeProvider;
-use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\TaxonomyNodeResource;
-use CoolMS\Entity\Factory\EntityFactoryFactoryInterface;
 use InvalidArgumentException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;

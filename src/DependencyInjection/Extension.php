@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace CoolMS\Taxonomy\Bundle\DependencyInjection;
 
+use CoolMS\Core\Bundle\DependencyInjection\AbstractExtension;
+use CoolMS\Core\Hierarchy\NestedSetOperatorInterface;
+use CoolMS\Entity\Bundle\DependencyInjection\EntityFactoryRegistrationTrait;
+use CoolMS\Entity\Doctrine\Tree\DoctrineNestedSetOperator as CoreDoctrineNestedSetOperator;
+use CoolMS\Taxonomy\Doctrine\Repository\TaxonomyNodeRepository;
+use CoolMS\Taxonomy\Doctrine\Repository\TaxonomyTreeRepository;
 use CoolMS\Taxonomy\Entity\TaxonomyNode;
 use CoolMS\Taxonomy\Entity\TaxonomyNodeInterface;
 use CoolMS\Taxonomy\Entity\TaxonomyTree;
@@ -12,12 +18,6 @@ use CoolMS\Taxonomy\Repository\TaxonomyNodeRepositoryInterface;
 use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
 use CoolMS\Taxonomy\Service\TaxonomyTreeService;
 use CoolMS\Taxonomy\Service\TaxonomyTreeServiceInterface;
-use CoolMS\Taxonomy\Doctrine\Repository\TaxonomyNodeRepository;
-use CoolMS\Taxonomy\Doctrine\Repository\TaxonomyTreeRepository;
-use CoolMS\Core\Hierarchy\NestedSetOperatorInterface;
-use CoolMS\Core\Bundle\DependencyInjection\AbstractExtension;
-use CoolMS\Entity\Doctrine\Tree\DoctrineNestedSetOperator as CoreDoctrineNestedSetOperator;
-use CoolMS\Entity\Bundle\DependencyInjection\EntityFactoryRegistrationTrait;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 

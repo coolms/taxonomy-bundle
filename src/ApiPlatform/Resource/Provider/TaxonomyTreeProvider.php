@@ -7,18 +7,18 @@ namespace CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\Provider;
 use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProviderInterface;
-use CoolMS\Core\DataGrid\DataGridConfig;
-use CoolMS\Core\DataGrid\DataGridConfigProviderInterface;
-use CoolMS\Taxonomy\Entity\TaxonomyTreeInterface;
-use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
-use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\TaxonomyTreeResource;
 use CoolMS\Core\Bundle\ApiPlatform\UriVariableUuidExtractorTrait;
 use CoolMS\Core\Bundle\Rql\RequestRqlParser;
+use CoolMS\Core\DataGrid\DataGridConfig;
+use CoolMS\Core\DataGrid\DataGridConfigProviderInterface;
 use CoolMS\Rql\RqlContext;
+use CoolMS\Taxonomy\Bundle\ApiPlatform\Resource\TaxonomyTreeResource;
+use CoolMS\Taxonomy\Entity\TaxonomyTree;
+use CoolMS\Taxonomy\Entity\TaxonomyTreeInterface;
+use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
 use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use CoolMS\Taxonomy\Entity\TaxonomyTree;
 
 /** @implements ProviderInterface<TaxonomyTreeResource> */
 final readonly class TaxonomyTreeProvider implements ProviderInterface
@@ -92,7 +92,7 @@ final readonly class TaxonomyTreeProvider implements ProviderInterface
      */
     private function buildRqlContext(): RqlContext
     {
-        $cfg = $this->resolveGridConfig('entity:'.TaxonomyTree::class);
+        $cfg = $this->resolveGridConfig('entity:' . TaxonomyTree::class);
 
         $allowedFields = [];
         $fieldMap = [];

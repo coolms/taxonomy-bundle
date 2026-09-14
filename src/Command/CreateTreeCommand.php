@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace CoolMS\Taxonomy\Bundle\Command;
 
+use CoolMS\Entity\Factory\EntityFactoryFactoryInterface;
 use CoolMS\Taxonomy\Entity\TaxonomyTreeInterface;
 use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
-use CoolMS\Entity\Factory\EntityFactoryFactoryInterface;
 use InvalidArgumentException;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;

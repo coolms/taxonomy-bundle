@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace CoolMS\Taxonomy\Bundle\DependencyInjection\Compiler;
 
-use CoolMS\Taxonomy\Repository\TaxonomyNodeRepositoryInterface;
-use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
 use CoolMS\Taxonomy\Doctrine\Repository\TaxonomyNodeRepository;
 use CoolMS\Taxonomy\Doctrine\Repository\TaxonomyTreeRepository;
+use CoolMS\Taxonomy\Repository\TaxonomyNodeRepositoryInterface;
+use CoolMS\Taxonomy\Repository\TaxonomyTreeRepositoryInterface;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;

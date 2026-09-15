@@ -3,6 +3,10 @@
     "description": "Symfony wiring for the taxonomy family: bundle, DI, console commands and the API surface.",
     "type": "symfony-bundle",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/coolms/taxonomy-bundle/issues",
+        "source": "https://github.com/coolms/taxonomy-bundle"
+    },
     "require": {
         "api-platform/core": "^4.1",
         "coolms/core": "^2.0",

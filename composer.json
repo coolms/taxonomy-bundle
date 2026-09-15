@@ -22,10 +22,21 @@
         "symfony/routing": "^8.0",
         "symfony/uid": "^8.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    },
     "autoload": {
         "psr-4": {
             "CoolMS\\Taxonomy\\Bundle\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoolMS\\Taxonomy\\Bundle\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
     },
     "extra": {
         "branch-alias": {
